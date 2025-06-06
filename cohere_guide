@@ -1,0 +1,23 @@
+Cohere 𝗿𝗲𝗹𝗲𝗮𝘀𝗲𝗱 𝗮 𝗻𝗲𝘄 𝗴𝘂𝗶𝗱𝗲 𝗼𝗻 𝗵𝗼𝘄 𝘁𝗼 𝗯𝘂𝗶𝗹𝗱 𝗲𝗻𝘁𝗲𝗿𝗽𝗿𝗶𝘀𝗲-𝗿𝗲𝗮𝗱𝘆 𝗔𝗜 𝗮𝗴𝗲𝗻𝘁𝘀 𝗶𝗻 𝗿𝗲𝗴𝘂𝗹𝗮𝘁𝗲𝗱 𝗶𝗻𝗱𝘂𝘀𝘁𝗿𝗶𝗲𝘀: 
+
+This is an excellent read for teams deploying agents in finance, healthcare, and other high-stakes environments — where security, tooling, and failure modes actually matter.
+
+𝗛𝗲𝗿𝗲 𝗮𝗿𝗲 6 𝗸𝗲𝘆 𝗶𝗻𝘀𝗶𝗴𝗵𝘁𝘀: 
+
+1. 𝗧𝗼𝗼𝗹𝗶𝗻𝗴 𝗶𝘀 𝘁𝗵𝗲 𝗻𝗲𝘄 𝗿𝗶𝘀𝗸 𝘀𝘂𝗿𝗳𝗮𝗰𝗲
+→ Every tool an agent touches is a potential failure point. Cohere suggests defining each tool "like an API product" — with strict specs, validation layers, and fallback behavior.
+
+2. 𝗟𝗟𝗠 𝘁𝗲𝗺𝗽𝗲𝗿𝗮𝘁𝘂𝗿𝗲 𝘀𝗲𝘁𝘁𝗶𝗻𝗴𝘀 𝗺𝗮𝘁𝘁𝗲𝗿 𝗺𝗼𝗿𝗲 𝘁𝗵𝗮𝗻 𝘆𝗼𝘂 𝘁𝗵𝗶𝗻𝗸
+→ They recommend a sweet spot between 0 and 0.3 for agent reasoning — to reduce randomness while still allowing adaptive behavior. It’s not just a UX tweak; it affects the agent’s ability to reason.
+
+3. 𝗛𝗮𝗹𝗹𝘂𝗰𝗶𝗻𝗮𝘁𝗶𝗼𝗻𝘀 𝗮𝗿𝗲𝗻’𝘁 𝗷𝘂𝘀𝘁 𝗮𝗯𝗼𝘂𝘁 𝘄𝗿𝗼𝗻𝗴 𝗮𝗻𝘀𝘄𝗲𝗿𝘀 — 𝘁𝗵𝗲𝘆’𝗿𝗲 𝗮𝗯𝗼𝘂𝘁 𝘄𝗵𝗲𝗻 𝘁𝗼 𝗲𝘀𝗰𝗮𝗹𝗮𝘁𝗲
+→ Confidence thresholds and structured output (like JSON) are now standard. But the real importance is routing low-confidence outputs to human review before they hit production (human in the loop).
+
+4. 𝗙𝗼𝗿𝗴𝗲𝘁 𝗽𝗿𝗼𝗺𝗽𝘁 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 — 𝘀𝘁𝗮𝗿𝘁 𝘄𝗶𝘁𝗵 𝘁𝗼𝗼𝗹 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴
+→ The report flips the script: engineering precise, well-scoped tools is now more important than crafting clever prompts. Bad tool definitions = brittle agents.
+
+5. 𝗠𝘂𝗹𝘁𝗶-𝘀𝘁𝗲𝗽 𝘄𝗼𝗿𝗸𝗳𝗹𝗼𝘄𝘀 𝗻𝗲𝗲𝗱 𝗹𝗮𝘆𝗲𝗿𝗲𝗱 𝗳𝗮𝗹𝗹𝗯𝗮𝗰𝗸 𝗹𝗼𝗴𝗶𝗰
+→ If one data source fails, agents should try backups, query logs, or escalate — *not* break. This kind of chained contingency planning is what separates MVPs from prod-ready systems.
+
+6. 𝗠𝗼𝘀𝘁 𝗽𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 𝗶𝘀𝘀𝘂𝗲𝘀 𝗮𝗿𝗲𝗻’𝘁 𝗺𝗼𝗱𝗲𝗹-𝗿𝗲𝗹𝗮𝘁𝗲𝗱 — 𝘁𝗵𝗲𝘆’𝗿𝗲 𝗼𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗼𝗻 𝗳𝗮𝗶𝗹𝘂𝗿𝗲𝘀
+→ The real scaling bottlenecks are queue management, caching, circuit breakers, and tool timeouts. Without this ops layer, your agent won’t survive real-world load.
