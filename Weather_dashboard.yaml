@@ -1,0 +1,31 @@
+# Agentic SDLC Pipeline Configuration
+# Purpose: Build a weather dashboard from a single prompt
+
+agents:
+  root:
+    model: modelname1
+    sub_agents: [spec_agent, code_agent, test_agent, review_agent, deploy_agent]
+    toolsets:
+      - type: todo
+      - type: filesystem
+      - type: think
+
+  spec_agent:
+    model: modelname2
+    toolsets: [todo, filesystem, shell]
+
+  code_agent:
+    model: modelname3
+    toolsets: [todo, filesystem, shell]
+
+  test_agent:
+    model: modelname4
+    toolsets: [todo, filesystem, shell]
+
+  review_agent:
+    model: modelname4
+    toolsets: [todo, filesystem, think]
+
+  deploy_agent:
+    model: modelname5
+    toolsets: [todo, filesystem, shell]
